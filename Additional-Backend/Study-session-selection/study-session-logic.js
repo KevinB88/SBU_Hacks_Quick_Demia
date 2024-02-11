@@ -1,4 +1,4 @@
-let classes = []; // Initialize an empty array for classes
+glet classes = []; // Initialize an empty array for classes
 let interval;
 let paused = false;
 let totalSeconds;
