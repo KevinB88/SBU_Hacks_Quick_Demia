@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cdd0799-34c5-4254-b7e0-ff4768087d96" name="Changes" comment="" />
+    <list default="true" id="0cdd0799-34c5-4254-b7e0-ff4768087d96" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/**Main-Site/modularity-V2/calendarLogic.js" beforeDir="false" afterPath="$PROJECT_DIR$/**Main-Site/modularity-V2/calendarLogic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/**Main-Site/modularity-V2/site-index-v2.html" beforeDir="false" afterPath="$PROJECT_DIR$/**Main-Site/modularity-V2/site-index-v2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
