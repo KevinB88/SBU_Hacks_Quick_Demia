@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const minuteSelectElement = document.getElementById('minuteSelect');
 
-    for (let i = 1; i <= 60; i++) {
+    for (let i = 1; i <= 59; i++) {
         const option = document.createElement("option");
         option.value = i;
         option.textContent = i; // Change "text" to "textContent"
@@ -13,14 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
 //this for loop is for hours
 document.addEventListener('DOMContentLoaded', function () {
     const hourSelectElement = document.getElementById('hourSelect');
+    hourSelectElement.innerHTML = ''; // Clear existing options
 
-    for (let i = 1; i <= 24; i++) {
-        const option = document.createElement("option");
-        option.value = i;
-        option.text = i; // Only the number will be displayed
-        hourSelectElement.appendChild(option);
+    // Generate hours with AM/PM
+    for (let period of ['AM', 'PM']) {
+        for (let i = 1; i <= 12; i++) {
+            const option = document.createElement("option");
+            option.value = `${i} ${period}`;
+            option.text = `${i} ${period}`;
+            hourSelectElement.appendChild(option);
+        }
     }
 });
+
 
 //this is for the days of the week
 // scripts.js
