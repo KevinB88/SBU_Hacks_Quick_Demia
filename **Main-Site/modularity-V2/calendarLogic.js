@@ -1,22 +1,15 @@
-// Utility functions for cookies (if not already defined elsewhere)
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
+// calendarLogic.js
+import { setCookie } from './utils.js';
+import { showNotification } from './notifications.js';
+import { initAssignments } from './assignments.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var selectedEvent = null;
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-        // FullCalendar configuration remains the same
-    headerToolbar: {
+
+      headerToolbar: {
       left: 'prev,next,today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay'
@@ -35,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       minute: '2-digit',
       hour12: false
     },
-    eventContent: function(arg) {
+     eventContent: function(arg) {
       var startTime = arg.event.startStr.substring(11, 16);
       var endTime = arg.event.endStr.substring(11, 16);
       var timeDisplay = startTime + ' - ' + endTime;
@@ -72,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
           description: description,
         };
         calendar.addEvent(event);
-
         setCookie('lastSelectedEvent', title, 7); // Save the event title as a cookie
 
         var now = new Date();
@@ -83,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
           setTimeout(() => {
             showNotification('Event Starting', title + ' is starting now.');
           }, delay);
-        }
+              }
       }
       calendar.unselect();
     },
@@ -91,12 +83,12 @@ document.addEventListener('DOMContentLoaded', function() {
       selectedEvent = arg.event;
       alert('Event selected. Click the delete button to remove this event.');
     }
-
-    });
+   });
 
     calendar.render();
 
-    // Event listeners for calendar-specific functionality
+    initAssignments(calendar);
+
     document.getElementById('deleteEvent').addEventListener('click', function() {
 
         if (selectedEvent) {
@@ -109,25 +101,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-function showNotification(title, body) {
-   if (Notification.permission === "granted") {
-    new Notification(title, { body });
-  } else {
-    Notification.requestPermission().then(permission => {
-      if (permission === "granted") {
-        new Notification(title, { body });
-      }
-    });
-  }
-}
-
-function requestAndTestNotification() {
-  Notification.requestPermission().then(permission => {
-    if (permission === "granted") {
-      new Notification("Test Notification", { body: "This is a test notification." });
-    }
-  });
-
-}

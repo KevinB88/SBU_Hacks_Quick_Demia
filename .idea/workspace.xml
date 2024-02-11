@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cdd0799-34c5-4254-b7e0-ff4768087d96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity/site-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity/site-logic-1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity/site-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/**Main-Site/site-initial/main-site-v2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/**Main-Site/site-test/main-site-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/**Main-Site/site-initial/main-site-styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/**Main-Site/site-test/main-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/**Main-Site/site-initial/main-site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity-V2/assignments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity-V2/calendarLogic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity-V2/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity-V2/notifications.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity-V2/site-index-v2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity-V2/site-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/**Main-Site/modularity-V2/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/**Main-Site/modularity/site-logic-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/**Main-Site/modularity/site-logic-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Additional-Backend/Priority-selection/priority-selection-logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/Additional-Backend/Priority-selection/priority-selection-logic.js" afterDir="false" />
     </list>
