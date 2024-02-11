@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Calendar</title>
     <meta charset='utf-8' />
-    <link rel="stylesheet" type="text/css" href="site-style.css">
+    <link rel="stylesheet" type="text/css" href="../site-style.css">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css" rel="stylesheet" />
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="tao_logo.png">
     <script defer src="site-logic-1.js"></script>
 </head>
 <body>
     <button id="deleteEvent" style="margin-bottom: 10px;">Delete Selected Event</button>
     <div id='calendar'></div>
-    <button onclick="requestAndTestNotification()">Test Notification</button>
+    <button id="testNotificationButton" onclick="requestAndTestNotification()">Test Notification</button>
+    <img src="../tao_idle.PNG" alt="Panda" class="bottom-right-panda">
 </body>
 </html>

@@ -7,6 +7,8 @@ body, html {
     background-color: #c3cfde;
 }
 
+
+
 .wrapper {
     font-family: 'Ubuntu', sans-serif;
     width: 420px;
@@ -18,6 +20,22 @@ body, html {
     margin-bottom: 2em; /* Adjust the bottom margin to control spacing between the wrapper and the button */
 }
 
+
+.input-box label {
+    color: royalblue; /* Your existing color */
+    font-family: 'Ubuntu', sans-serif; /* Your existing font */
+    text-align: center; /* Center the text within the label */
+    width: 100%; /* Allow the label to fill the container width */
+    margin-bottom: 10px; /* Space between label and input */
+}
+
+.time-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%; /* Make sure this container fills its parent's width */
+}
 
 
 .wrapper h1{
@@ -62,6 +80,8 @@ select option {
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Align items vertically */
     gap: 5px; /* Space between items */
+    /*not sure about this tbh */
+    width: 100%;
 }
 
 #dayButton, #hourSelect, #minuteSelect {
