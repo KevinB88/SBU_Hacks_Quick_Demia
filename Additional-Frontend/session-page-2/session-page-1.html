@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection</title>
+</head>
+<body>
+    <h2>Add Your Courses of Interest</h2>
+    <input type="text" id="courseInput" placeholder="Enter course name">
+    <button onclick="addCourse()">Add Course</button>
+    <ul id="courseList"></ul>
+    <button onclick="submitCourses()">Submit Courses</button>
+
+    <script>
+        let courses = [];
+
+        function addCourse() {
+            const courseInput = document.getElementById('courseInput');
+            const courseName = courseInput.value.trim();
+            if (courseName && !courses.includes(courseName)) {
+                courses.push(courseName);
+                const li = document.createElement('li');
+                li.textContent = courseName;
+                document.getElementById('courseList').appendChild(li);
+                courseInput.value = ''; // Clear the input
+            }
+        }
+
+        function submitCourses() {
+            localStorage.setItem('courses', JSON.stringify(courses));
+            window.location.href = 'study-session-page-2.html'; // Redirect to the study session page
+        }
+    </script>
+</body>
+</html>

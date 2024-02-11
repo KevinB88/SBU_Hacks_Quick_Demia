@@ -1,0 +1,56 @@
+/* General body styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* Styling for headings */
+h2 {
+    color: #007bff; /* Bootstrap primary color for consistency */
+    margin-bottom: 15px;
+}
+
+/* Input field and buttons styling */
+input[type="text"],
+input[type="number"],
+button {
+    padding: 10px;
+    margin: 5px 0; /* Add some space above and below */
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem; /* Bootstrap's border-radius */
+    font-size: 16px;
+}
+
+/* Specific styling for buttons to differentiate them */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3; /* A darker shade for hover effect */
+}
+
+/* Wrapper styling for time input and the "minutes" label */
+#timeInputWrapper {
+    display: flex;
+    align-items: center;
+}
+
+#timeInputWrapper span {
+    margin-left: 8px;
+    color: #6c757d; /* Bootstrap's secondary text color */
+}
+
+/* Timer output styling */
+#timerOutput {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745; /* Success color for visibility */
+}

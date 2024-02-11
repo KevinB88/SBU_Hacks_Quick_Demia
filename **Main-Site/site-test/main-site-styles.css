@@ -1,0 +1,46 @@
+/* General Calendar Style */
+.fc {
+  background-color: #fff; /* Overall calendar background */
+  color: #000; /* Text color for the calendar */
+  font-family: Arial, sans-serif; /* Font for the calendar */
+}
+
+/* Event Style */
+.fc-event {
+  background-color: #007bff; /* Background color for events */
+  color: #fff; /* Text color for events */
+  border: 1px solid #007bff; /* Border color for events */
+}
+
+/* Header and Button Style */
+.fc-header-toolbar {
+  background-color: #f7f7f7; /* Background color for the header */
+  color: #333; /* Text color for the header */
+}
+.fc-button {
+  background-color: #007bff; /* Background color for buttons */
+  color: #fff; /* Text color for buttons */
+}
+
+/* Weekend and Today Highlighting */
+.fc .fc-day-today {
+  background-color: #ffffe0; /* Background color for today */
+}
+.fc .fc-day-weekend {
+  background-color: #f0f0f0; /* Background color for weekends */
+}
+
+
+/* Button styling */
+#deleteEvent {
+  background-color: #ff0000; /* Red background */
+  color: #ffffff; /* White text */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding around text */
+  margin-bottom: 10px; /* Margin at the bottom */
+  cursor: pointer; /* Cursor to indicate it's clickable */
+  border-radius: 5px; /* Rounded corners */
+}
+#deleteEvent:hover {
+  background-color: #cc0000; /* Darker shade of red on hover */
+}

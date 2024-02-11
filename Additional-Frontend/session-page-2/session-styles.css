@@ -1,0 +1,132 @@
+body, html {
+    display: flex;
+    flex-direction: column; /* Change the direction to column to stack vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c3cfde;
+}
+
+.wrapper {
+    font-family: 'Ubuntu', sans-serif;
+    width: 420px;
+    background-color: white;
+    color: royalblue;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    padding: 20px;
+    margin-bottom: 2em; /* Adjust the bottom margin to control spacing between the wrapper and the button */
+}
+
+
+
+.wrapper h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+form input{
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 27px;
+    margin-left: 46px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*button*/
+
+select {
+    color: rgb(38, 50, 56); /* A color that contrasts with the background */
+    background: rgba(136, 126, 126, 0.3); /* A background that ensures text is legible */
+    /* Add other styles as needed to match your design */
+}
+
+/* Adjust styles for options within select dropdown */
+select option {
+    color: rgb(38, 50, 56); /* Ensure text is visible against the background */
+    background: white; /* Optionally set a background color for options */
+}
+
+.time-selection {
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 5px; /* Space between items */
+}
+
+#dayButton, #hourSelect, #minuteSelect {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, royalblue, steelblue);
+    border: 0;
+    padding: 10px 20px; /* Adjusted padding for uniform appearance */
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    flex-grow: 1; /* Allows items to grow to fill the space */
+    /* Removed width:auto; and margin:0; since flex-grow is used */
+}
+
+#dayButton {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, royalblue, steelblue);
+    border: 0;
+    padding: 10px 40px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 auto;
+    display: block;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+#dayButton:hover {
+    background: lightsteelblue;
+    color: #000;
+}
+
+
+#addClassButton {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, royalblue, steelblue);
+    border: 0;
+    padding: 10px 40px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 auto; /* Ensure it's centered horizontally */
+    display: block; /* Treat the button as a block-level element for margin auto to work */
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+
+#addClassButton:hover {
+    background: #acc2e0;
+    color: #000;
+}
+
+/* custom-styles.css */
+.bottom-right-panda {
+    position: fixed;
+    right: 10px; /* Adjust as needed */
+    bottom: 10px; /* Adjust as needed */
+    width: 100px; /* Making the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 100; /* Ensure it's on top of other elements if necessary */
+}
+
+
+/*everything below here will be dedicated to animated backgrounds*/

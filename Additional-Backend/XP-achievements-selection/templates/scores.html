@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Scores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <form action="{{ url_for('delete_scores', user_id=user_id) }}" method="post">
+        <input type="submit" value="Delete All Scores for This User">
+    </form>
+
+       <h1>User ID: {{ user_id }}</h1>
+
+    <!-- Check if there are scores to display -->
+    {% if scores %}
+        <ul>
+            {% for score in scores %}
+                <li>{{ score.course }}: {{ score.score }}</li>
+            {% endfor %}
+        </ul>
+        <p><strong>Total Score:</strong> {{ total_score }}</p>
+    {% else %}
+        <p>No scores available.</p>
+    {% endif %}
+
+    <!-- Link back to add more scores or to the homepage -->
+    <a href="{{ url_for('add_score_route') }}">Add Another Score</a> |
+    <a href="{{ url_for('index') }}">Back to Home</a>
+
+
+</body>
+</html>

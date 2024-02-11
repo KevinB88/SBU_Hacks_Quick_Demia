@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Session</title>
+    <link rel="stylesheet" href="session-styles.css">
+</head>
+<body>
+    <h2>Your Courses</h2>
+    <ul id="selectedCourses"></ul>
+
+    <!-- Include your existing timekeeping logic and form here -->
+
+    <script>
+        window.onload = function() {
+            const selectedCourses = JSON.parse(localStorage.getItem('courses')) || [];
+            const courseList = document.getElementById('selectedCourses');
+            selectedCourses.forEach(course => {
+                const li = document.createElement('li');
+                li.textContent = course;
+                courseList.appendChild(li);
+            });
+        };
+    </script>
+
+    <script src="session-page-logic.js"></script>
+</body>
+</html>
