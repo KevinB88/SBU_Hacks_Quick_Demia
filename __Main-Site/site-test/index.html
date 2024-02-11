@@ -12,9 +12,109 @@
 		<link rel="manifest" href="./site.webmanifest" />
 		<meta name="theme-color" id="theme-meta" content="#222233" />
 	</head>
-	<body>
-		<button id="menubtn" title="Open Settings"></button>
-		<div id="taskswitcher">
+<!--	</script>-->
+<style>
+body{  font-family: Arial, Helvetica, sans-serif;}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+	display:block;
+	top:0;
+	position: absolute;
+	width: 92vw;
+	width: 92vw;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.test {
+	position: relative;
+	margin-top: 50px;
+
+}
+
+.test2 {
+	position: absolute;
+	padding-right: 100px ;
+}
+
+</style>
+<!--</head>-->
+<body style="background-color:white;">
+
+<div class="navbar">
+
+<button class="test2" id="menubtn" title="Open Settings"></button>
+  <a href="#home">Home</a>
+  <a href="main-site.html">Calender</a>
+  <div class="dropdown">
+<!--    <button class="dropbtn">Dropdown-->
+<!--      <i class="fa fa-caret-down"></i>-->
+<!--    </button>-->
+    <div class="dropdown-content">
+      <a href="index.html">Pomodoro Timer</a>
+<!--      <a href="#">Link 2</a>-->
+<!--      <a href="#">Link 3</a>-->
+    </div>
+  </div>
+</div>
+
+<!--	<body>-->
+
+		<div class="test" id="taskswitcher">
 			<button id="statbtn" title="View Statistics">
 				<span id="statline1"></span>
 				<span id="statline2"></span>
@@ -37,7 +137,7 @@
 				/>
 			</svg>
 		</button>
-		<main id="main">
+		<div id="main">
 			<div id="timer" class="t-focus">
 				<svg id="ring" viewbox="0 0 100 100">
 					<circle id="secondary" cx="50" cy="50" r="48" fill="none" />
@@ -79,7 +179,7 @@
 					<path d="M12 36l17-12-17-12v24zm20-24v24h4V12h-4z" />
 				</svg>
 			</button>
-		</main>
+		</div>
 		<div id="menu" class="scrollbar">
 			<div class="menu-title">Pomodoro</div>
 			<div class="content">
