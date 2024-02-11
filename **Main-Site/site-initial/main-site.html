@@ -121,6 +121,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   calendar.render();
 
+
+
+
   document.getElementById('deleteEvent').addEventListener('click', function() {
     if (selectedEvent) {
       if(confirm('Are you sure you want to delete the selected event?')) {
@@ -132,6 +135,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+
+
 
 function showNotification(title, body) {
   if (Notification.permission === "granted") {
