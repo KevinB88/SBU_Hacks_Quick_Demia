@@ -5,31 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cdd0799-34c5-4254-b7e0-ff4768087d96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/**Main-Site/site-test/main-site-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/**Main-Site/site-test/main-site.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/Priority-selection/priority-selection-html.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/Priority-selection/priority-selection-logic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/Study-session-selection/study-session-logic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/Study-session-selection/study-session-page-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/Study-session-selection/study-session-page-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/Study-session-selection/study-session-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/Study-session-selection/study-session.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/XP-achievements-selection/XP-Score-manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/XP-achievements-selection/statics/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/XP-achievements-selection/templates/add_score.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/XP-achievements-selection/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/XP-achievements-selection/templates/scores.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Backend/XP-achievements-selection/templates/view_all.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Frontend/session-page-1/page-1-html.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Frontend/session-page-1/page-1-logic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Frontend/session-page-1/page-1-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Frontend/session-page-2/pick-a-class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Frontend/session-page-2/session-page-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Frontend/session-page-2/session-page-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Frontend/session-page-2/session-page-logic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additional-Frontend/session-page-2/session-styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Additional-Backend/Priority-selection/priority-selection-logic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Additional-Backend/Priority-selection/priority-selection-logic.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
