@@ -12,7 +12,6 @@
         <h1>Add a class</h1>
         <div class="input-box">
             <input class="un" type="text" id="className" placeholder="Enter class name">
-            <input class="un" type="text" id="creditHours" placeholder="Credit Hours">
         </div>
         <!-- Removed course length input -->
         <div class="input-box">
@@ -54,19 +53,24 @@ function getCookie(name) {
 
 document.getElementById("addClassButton").addEventListener("click", function() {
     const className = document.getElementById("className").value;
-    const creditHours = document.getElementById("creditHours").value;
     const startTime = document.getElementById("startTime").value; // Updated to capture start time
     const endTime = document.getElementById("endTime").value; // Updated to capture end time
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
 
-    // Set cookies for the class details including start and end times
-    setCookie('className', className, 7);
-    setCookie('creditHours', creditHours, 7);
-    setCookie('startTime', startTime, 7); // Updated to set start time cookie
-    setCookie('endTime', endTime, 7); // Updated to set end time cookie
-    setCookie('startDate', startDate, 7);
-    setCookie('endDate', endDate, 7);
+    // Construct the event object
+    const event = {
+        title: className,
+        start: startDate + "T" + startTime,
+        end: endDate + "T" + endTime
+    };
+
+    // Get the current saved events or initialize as an empty array
+    var savedEvents = JSON.parse(getCookie('savedEvents') || '[]');
+    // Add the new event to the saved events array
+    savedEvents.push(event);
+    // Save the updated saved events array back to the cookie
+    setCookie('savedEvents', JSON.stringify(savedEvents), 7);
 
     alert("Class added successfully!");
     // Optionally, redirect or handle the data in other ways
