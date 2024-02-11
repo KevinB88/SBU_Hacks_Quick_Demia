@@ -6,9 +6,63 @@
 <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="site-style.css">
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
-<script defer src="site-logic-1.js"></script>
 <script>
-// Utility functions for managing cookies
+// Placeholder for cookie utility functions
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+// New function to load "pick-a-class" data as events
+function loadClassesAsEvents() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      // Additional calendar options...
+    });
+
+    var classData = getCookie("pickedClasses"); // Assuming class data is stored in a "pickedClasses" cookie
+    if(classData) {
+        var classes = JSON.parse(classData); // Convert the JSON string back to an object
+        classes.forEach(function(cls) {
+            // Assuming cls has title, start, and end attributes
+            calendar.addEvent({
+                title: cls.title,
+                start: cls.start,
+                end: cls.end
+            });
+        });
+        alert("Classes loaded as events!");
+    }
+    calendar.render(); // Make sure to render the calendar after adding events
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      // Define other options and event sources as needed
+    });
+
+    calendar.render();
+    loadClassesAsEvents(); // Load "pick-a-class" events from cookies on page load
+});
 </script>
 <style>
   body {

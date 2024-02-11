@@ -1,85 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--<link rel="stylesheet" href="session-styles.css">-->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/path/to/font-awesome/css/font-awesome.min.css">
     <title>SBU HACKATHON</title>
 </head>
 <body>
 
 <div class="wrapper">
-    <form action="">
+    <form id="classForm">
         <h1>Add a class</h1>
         <div class="input-box">
-            <input class="un" type="text" placeholder="Enter class name">
-            <input class="un" type="text" placeholder="Credit Hours">
+            <input class="un" type="text" id="className" placeholder="Enter class name">
+            <input class="un" type="text" id="creditHours" placeholder="Credit Hours">
         </div>
-        <input class="un" type="text" placeholder="Course length">
+        <!-- Removed course length input -->
+        <div class="input-box">
+            <label for="startTime">Start Time:</label>
+            <input class="un" type="time" id="startTime"> <!-- Added start time input -->
+            <label for="endTime">End Time:</label>
+            <input class="un" type="time" id="endTime"> <!-- Added end time input -->
+        </div>
         <div class="input-box">
             <label for="startDate">Start Date:</label>
-            <input class="un" type="date" id="startDate" name="startDate">
+            <input class="un" type="date" id="startDate">
             <label for="endDate">End Date:</label>
-            <input class="un" type="date" id="endDate" name="endDate">
+            <input class="un" type="date" id="endDate">
         </div>
-        <div class="input-box">
-            <div class="time-selection">
-                <button type="button" id="dayButton">Day</button>
-                <select id="hourSelect" name="Hour">
-                    <option value="" disabled selected>Hours</option>
-                    <!-- Hours will be added here -->
-                </select>
-                <select id="minuteSelect" name="Minute">
-                    <option value="" disabled selected>Minutes</option>
-                    <!-- Minutes will be added here -->
-                </select>
-            </div>
-        </div>
+        <button type="button" id="addClassButton">Add Class</button>
     </form>
 </div>
 
-<!-- Button outside and below the .wrapper -->
-<button type="button" id="addClassButton" onclick="addClass()">Add Class</button>
+<script>
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
-<!-- Form initially hidden -->
-<form id="dayForm" action="/action_page.php" style="display:none;">
-    <!-- Checkboxes for days will be added here by scripts.js -->
-</form>
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
 
-<!-- Link to external JavaScript file -->
-<script src="session-page-logic.js"></script>
-<!--<script src="scripts.js"></script>-->
+document.getElementById("addClassButton").addEventListener("click", function() {
+    const className = document.getElementById("className").value;
+    const creditHours = document.getElementById("creditHours").value;
+    const startTime = document.getElementById("startTime").value; // Updated to capture start time
+    const endTime = document.getElementById("endTime").value; // Updated to capture end time
+    const startDate = document.getElementById("startDate").value;
+    const endDate = document.getElementById("endDate").value;
 
+    // Set cookies for the class details including start and end times
+    setCookie('className', className, 7);
+    setCookie('creditHours', creditHours, 7);
+    setCookie('startTime', startTime, 7); // Updated to set start time cookie
+    setCookie('endTime', endTime, 7); // Updated to set end time cookie
+    setCookie('startDate', startDate, 7);
+    setCookie('endDate', endDate, 7);
 
-<!--well see what this becomes-->
-<img src="pandaSBU.jpg" alt="Girl in a jacket" class="bottom-right-panda">
-<div class="bubbles">
-    <span style="--i:11;"></span>
-    <span style="--i:14;"></span>
-    <span style="--i:14;"></span>
-    <span style="--i:12;"></span>
-    <span style="--i:11;"></span>
-    <span style="--i:17;"></span>
-    <span style="--i:11;"></span>
-    <span style="--i:20;"></span>
-    <span style="--i:11;"></span>
-    <span style="--i:12;"></span>
-    <span style="--i:13;"></span>
-    <span style="--i:11;"></span>
-    <span style="--i:16;"></span>
-    <span style="--i:25;"></span>
-    <span style="--i:25;"></span>
-    <span style="--i:11;"></span>
-    <span style="--i:15;"></span>
-    <span style="--i:11;"></span>
-    <span style="--i:13;"></span>
-    <span style="--i:11;"></span>
-    <span style="--i:17;"></span>
-    <span style="--i:11;"></span>
-    <span style="--i:15;"></span>
-    <span style="--i:11;"></span>
-    <!-- Add more spans for more bubbles -->
-</div>
+    alert("Class added successfully!");
+    // Optionally, redirect or handle the data in other ways
+});
+</script>
+
 </body>
 </html>
