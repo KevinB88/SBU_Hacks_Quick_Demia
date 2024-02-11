@@ -30,7 +30,7 @@
   background-color: #f0f0f0; /* Background color for weekends */
 }
 
-/* Button styling */
+/* Delete Button styling */
 #deleteEvent {
   background-color: #ff0000; /* Red background */
   color: #ffffff; /* White text */
@@ -42,4 +42,19 @@
 }
 #deleteEvent:hover {
   background-color: #cc0000; /* Darker shade of red on hover */
+}
+
+/* Save and Load Buttons styling */
+#saveEventsBtn, #loadEventsBtn {
+  background-color: #28a745; /* Green background */
+  color: #ffffff; /* White text */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding around text */
+  margin-top: 10px; /* Margin on top */
+  cursor: pointer; /* Cursor to indicate it's clickable */
+  border-radius: 5px; /* Rounded corners */
+}
+
+#saveEventsBtn:hover, #loadEventsBtn:hover {
+  background-color: #218838; /* Darker shade of green on hover */
 }
